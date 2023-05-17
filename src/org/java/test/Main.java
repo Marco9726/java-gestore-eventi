@@ -1,7 +1,9 @@
-package org.java.mid;
+package org.java.test;
 
 import java.time.LocalDate;
 import java.util.Scanner;
+
+import org.java.obj.Event;
 
 public class Main {
 	
@@ -132,20 +134,14 @@ public class Main {
 					break;
 				}
 			}
-			
-			
+					
 			
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 		} 
 		
-	
-		
-		
-		
-		
-		
-		 
+		sc.close();
+			 
 	}
 }

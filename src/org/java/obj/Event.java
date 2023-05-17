@@ -1,4 +1,4 @@
-package org.java.mid;
+package org.java.obj;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -9,7 +9,7 @@ public class Event {
 
 	private String title;
 	private LocalDate date;
-	private int totalSeats;
+	protected int totalSeats;
 	private int bookedSeats = 0;
 	
 	public Event( String title, LocalDate date, int totalSeats) throws Exception {
