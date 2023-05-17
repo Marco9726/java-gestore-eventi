@@ -77,15 +77,15 @@ public class Event {
 		}
 	}
 	
-	private int remainsSeats( int totalSeats, int bookedSeats) {
+	public int remainsSeats( ) {
 		
-		return totalSeats - bookedSeats;
+		return getTotalSeats() - getBookedSeats();
 	}
 	
 	//prenota
-	public void bookSeat(LocalDate date) throws Exception {
+	public void bookSeat() throws Exception {
 		
-		if (!isBefore(date) && totalSeats > bookedSeats) {
+		if (!isBefore(this.date) && this.remainsSeats() > 0) {
 			
 			this.bookedSeats++;			
 		} else {
@@ -95,9 +95,9 @@ public class Event {
 	}
 	
 	//disdici
-	public void cancelSeat(LocalDate date) throws Exception {
+	public void cancelSeat() throws Exception {
 		
-		if (!isBefore(date) && bookedSeats > 0) {
+		if (!isBefore(this.date) && getBookedSeats() > 0) {
 			
 			this.bookedSeats--;		
 		} else {
@@ -113,7 +113,7 @@ public class Event {
 		return "Titolo evento: " + getTitle() + "\n" +
 				"Data: " + getDate() + "\n" +
 				"Posti totali: " + getTotalSeats() + "\n" +
-				"Posti rimanenti: " + remainsSeats( totalSeats, bookedSeats);
+				"Posti rimanenti: " + remainsSeats();
 				
 	}
 	
