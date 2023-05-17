@@ -67,18 +67,7 @@ public class ProgramEvents {
 		events.clear();
 	}
 	
-	public String getTitlesAndDates() {
-		
-		StringBuilder stringBuilder = new StringBuilder();
-		
-		for (Event event : events) {
-            stringBuilder.append(event.getDate()).append(" (").append(event.getTitle()).append("), ");
-        }
-		
-		String result = stringBuilder.substring(0, stringBuilder.length() - 2);
-		
-		return result;
-	}
+	
 	
 	
 	
@@ -89,6 +78,6 @@ public class ProgramEvents {
 		
 	
 		return "Titolo: " + getTitle() + "\n" 
-				+ "----" + "\n" + getTitlesAndDates();
+				+ "----" + "\n" + getEvents();
 	}
 }
